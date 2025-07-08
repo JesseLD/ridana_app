@@ -9,6 +9,7 @@ final ThemeData lightTheme = ThemeData(
     backgroundColor: const Color(0xFFFFC107),
     foregroundColor: Color(0xFF111111),
   ),
+  
   colorScheme: const ColorScheme(
     brightness: Brightness.light,
     primary: Color(0xFFFFC107),
