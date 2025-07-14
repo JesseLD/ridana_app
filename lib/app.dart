@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ridana_app/common/themes/dark_theme.dart';
 import 'package:ridana_app/common/themes/light_theme.dart';
-import 'package:ridana_app/features/home/pages/home_page.dart';
-import 'package:ridana_app/features/login/presentation/pages/login_page.dart';
+import 'package:ridana_app/features/views/pages/welcome/welcome_page.dart';
+import 'package:ridana_app/features/views/sample_page.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -17,12 +16,12 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode:
-          ThemeMode
-              .system, // Automatically switch between light and dark themes
+      // darkTheme: darkTheme,
+      // themeMode:
+      //     ThemeMode
+      //         .system, // Automatically switch between light and dark themes
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: WelcomePage(),
     );
   }
 }

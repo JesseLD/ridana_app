@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ridana_app/common/constants/app_colors.dart';
 
 final ThemeData lightTheme = ThemeData(
   applyElevationOverlayColor: false,
@@ -6,15 +7,15 @@ final ThemeData lightTheme = ThemeData(
   canvasColor: const Color(0xFFFAFAFB),
   cardColor: const Color(0xFFFAFAFB),
   appBarTheme: AppBarTheme(
-    backgroundColor: const Color(0xFFFFC107),
+    backgroundColor: AppColors.primary,
     foregroundColor: Color(0xFF111111),
   ),
-  
+
   colorScheme: const ColorScheme(
     brightness: Brightness.light,
-    primary: Color(0xFFFFC107),
+    primary: AppColors.primary,
     onPrimary: Color(0xFFFFFFFF),
-    primaryContainer: Color(0xFFFFC107),
+    primaryContainer: AppColors.primary,
     onPrimaryContainer: Color(0xFF111111),
     secondary: Color(0xFF6B5D3F),
     onSecondary: Color(0xFFFFFFFF),
@@ -31,15 +32,15 @@ final ThemeData lightTheme = ThemeData(
     surface: Color(0xFFFAFAFB),
     onSurface: Color(0xFF111111),
     surfaceContainerHighest: Color(0xFFF6ECDF),
-    onSurfaceVariant: Color(0xFFFFC107),
-    outline: Color(0xFFFFC107),
+    onSurfaceVariant: AppColors.primary,
+    outline: AppColors.primary,
     outlineVariant: Color(0xFFD0C5B4),
     shadow: Color(0xFF111111),
     scrim: Color(0xFF000000),
     inverseSurface: Color(0xFF111111),
     onInverseSurface: Color(0xFFF9EFE2),
     inversePrimary: Color(0xFFE9C16C),
-    surfaceTint: Color(0xFFFFC107),
+    surfaceTint: AppColors.primary,
   ),
   disabledColor: const Color(0x61000000),
   dividerColor: const Color(0x1F111111),
@@ -47,7 +48,7 @@ final ThemeData lightTheme = ThemeData(
   highlightColor: const Color(0x66BCBCBC),
   hintColor: const Color(0x99000000),
   hoverColor: const Color(0x0A000000),
-  primaryColor: const Color(0xFFFFC107),
+  primaryColor: AppColors.primary,
   primaryColorDark: const Color(0xFF1976D2),
   primaryColorLight: const Color(0xFFBBDEFB),
   scaffoldBackgroundColor: const Color(0xFFFAFAFB),
@@ -76,31 +77,32 @@ final ThemeData lightTheme = ThemeData(
   // Elevated Button Theme
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: const Color(0xFFFFC107),
-      foregroundColor: Colors.white,
+      backgroundColor: AppColors.primary,
+      foregroundColor: AppColors.black,
+
       minimumSize: const Size(64, 36),
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     ).copyWith(
-      elevation: WidgetStateProperty.resolveWith<double?>((
-        Set<WidgetState> states,
-      ) {
-        if (states.contains(WidgetState.focused)) return 4;
-        if (states.contains(WidgetState.hovered)) return 4;
-        if (states.contains(WidgetState.pressed)) return 8;
-        return 0;
-      }),
-      overlayColor: WidgetStateProperty.resolveWith<Color?>((
-        Set<WidgetState> states,
-      ) {
-        if (states.contains(WidgetState.focused))
-          return const Color(0x1AFFFFFF);
-        if (states.contains(WidgetState.hovered))
-          return const Color(0x14FFFFFF);
-        if (states.contains(WidgetState.pressed))
-          return const Color(0x1AFFFFFF);
-        return null;
-      }),
+      // elevation: WidgetStateProperty.resolveWith<double?>((
+      //   Set<WidgetState> states,
+      // ) {
+      //   if (states.contains(WidgetState.focused)) return 4;
+      //   if (states.contains(WidgetState.hovered)) return 4;
+      //   if (states.contains(WidgetState.pressed)) return 8;
+      //   return 0;
+      // }),
+      // overlayColor: WidgetStateProperty.resolveWith<Color?>((
+      //   Set<WidgetState> states,
+      // ) {
+      //   if (states.contains(WidgetState.focused))
+      //     return const Color(0x1AFFFFFF);
+      //   if (states.contains(WidgetState.hovered))
+      //     return const Color(0x14FFFFFF);
+      //   if (states.contains(WidgetState.pressed))
+      //     return const Color(0x1AFFFFFF);
+      //   return null;
+      // }),
     ),
   ),
 
